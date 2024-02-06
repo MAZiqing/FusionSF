@@ -1,0 +1,42 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /datamodule: ts_datamodule.yaml
+  - override /pl_module: Informer.yaml #FiLM.yaml, Pyraformer.yaml, PatchTST.yaml, Nonstationary_Transformer.yaml, TimesNet.yaml, Reformer.yaml, MICN.yaml, LightTS.yaml, FEDformer.yaml, ETSformer.yaml, DLinear.yaml, Transformer.yaml, Autoformer.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+# NEED TO DEBUG THIS: Pyraformer.yaml, Nonstationary_Transformer.yaml, MICN.yaml ETSformer.yaml
+# ADAPT pl.module: Reformer.yaml, 
+
+seed: 42
+
+# pl_module:
+#   model:
+#     enc_in: 10
+#     dec_in: 10
+#     c_out: 1
+#     label_len: 24
+#     pred_len: 48
+#     d_model: 2048
+#     n_heads: 4
+#     e_layers: 2
+#     d_layers: 2
+#     d_ff: 2048
+#     factor: 5
+#     dropout: 0.1
+#     embed: timeF
+#     activation: gelu
+#     distil: True
+
+trainer:
+  max_epochs: 100
+
+
+logger:
+  wandb:
+    group: "informer"
