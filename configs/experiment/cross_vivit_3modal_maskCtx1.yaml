@@ -4,8 +4,9 @@
 # python train.py experiment=example
 
 defaults:
+#  - override /datamodule: tscontext_3modal_zeroshot_dm.yaml
   - override /datamodule: tscontext_3modal_dm.yaml
-  - override /pl_module: fusionsf_3modal.yaml
+  - override /pl_module: cross_vivit_3modal_maskCtx1.yaml
   - override /trainer: default.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
@@ -42,7 +43,7 @@ pl_module:
     dim: 64
     depth: 12
     heads: 8
-    mlp_ratio: 4
+    mlp_ratio: 1
     dim_head: 64
     dropout: 0.4
     num_mlp_heads: 1

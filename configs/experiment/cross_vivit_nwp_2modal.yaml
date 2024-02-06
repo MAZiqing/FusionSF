@@ -4,8 +4,8 @@
 # python train.py experiment=example
 
 defaults:
-  - override /datamodule: tscontext_3modal_dm.yaml
-  - override /pl_module: fusionsf_3modal.yaml
+  - override /datamodule: tsnwp_2modal_dm.yaml
+  - override /pl_module: cross_vivit_nwp_2modal.yaml
   - override /trainer: default.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
@@ -13,17 +13,8 @@ defaults:
 
 seed: 42
 
-#datamodule:
-#  dataset:
-#    context_channels: [IR_039, IR_087, IR_108, VIS006, VIS008, WV_062, WV_073]
-#    optflow_channels: [IR_039_vx, IR_039_vy, IR_087_vx, IR_087_vy, IR_108_vx, IR_108_vy, WV_062_vx, WV_062_vy, WV_073_vx, WV_073_vy]
-#    image_size: null
-#    crop: null
-#  batch_size: 32
-
 trainer:
   max_epochs: 100
-
 
 pl_module:
   use_dp: False
@@ -42,7 +33,7 @@ pl_module:
     dim: 64
     depth: 12
     heads: 8
-    mlp_ratio: 4
+    mlp_ratio: 1
     dim_head: 64
     dropout: 0.4
     num_mlp_heads: 1
@@ -54,6 +45,7 @@ pl_module:
 
   criterion:
     _target_: torch.nn.L1Loss
+
 logger:
   wandb:
-    group: "cross_3modal"
+    group: "cross_2modal_nwp"

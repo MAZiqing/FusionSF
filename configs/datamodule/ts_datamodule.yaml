@@ -1,0 +1,13 @@
+_target_: src.datamodules.ts_datamodule.TSDataModule
+dataset:
+  data_dir: './data'
+  seq_len: 24
+  label_len: 12
+  pred_len: 24
+  num_sites: 10
+  num_ignored_sites: 0
+
+# Dataloader specific
+batch_size: 8
+num_workers: 4
+pin_memory: False

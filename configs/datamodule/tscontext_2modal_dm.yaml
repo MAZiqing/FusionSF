@@ -1,0 +1,23 @@
+_target_: src.datamodules.tscontext_2modal_datamodule.Ts2MDataModule
+dataset:
+  data_dir: './data'
+  seq_len: 24
+  label_len: 0
+  pred_len: 24
+  num_sites: 10
+  num_ignored_sites: 0
+  dataset_test:
+    data_dir: './data'
+    seq_len: 24
+    label_len: 0
+    pred_len: 24
+    num_sites: 10
+    num_ignored_sites: 0
+
+# Dataloader specific
+batch_size: 16
+num_workers: 4
+pin_memory: False
+train_ratio: 0.6
+valid_ratio: 0.2
+test_ratio: 0.2
