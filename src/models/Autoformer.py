@@ -4,9 +4,6 @@ import torch.nn.functional as F
 from src.models.layers.Embed import DataEmbedding, DataEmbedding_wo_pos
 from src.models.layers.AutoCorrelation import AutoCorrelation, AutoCorrelationLayer
 from src.models.layers.Autoformer_EncDec import Encoder, Decoder, EncoderLayer, DecoderLayer, my_Layernorm, series_decomp
-import math
-import numpy as np
-
 
 class Autoformer(nn.Module):
     """
