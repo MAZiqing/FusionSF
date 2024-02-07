@@ -15,7 +15,7 @@ scheduler:
   max_iters: ${trainer.max_epochs}
 
 model:
-  _target_: src.models.cross_vivit_3modal.RoCrossViViT
+  _target_: src.models.fusionSF_3modal.FusionSF3M
   image_size: [64, 64]
   patch_size: [8, 8]
   pe_type: rope
