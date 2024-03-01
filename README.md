@@ -52,8 +52,8 @@ Zip File: https://drive.google.com/file/d/18Y-kwNUkT9t5EBugWxtDoE5HnMfaFG2D/view
 
 ```bash
 # clone project
-git clone https://github.com/MAZiqing/FuisionSF.git
-cd FuisionSF
+git clone https://github.com/MAZiqing/FusionSF.git
+cd FusionSF
 
 # [OPTIONAL] create conda environment
 conda create -n MyEnvName python=3.10
