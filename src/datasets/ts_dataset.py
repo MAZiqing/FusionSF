@@ -48,7 +48,7 @@ class TsDataset(Dataset):
         self.num_ignored_sites = num_ignored_sites
 
         self.data_sp, self.data_sp_time, self.data_sp_time_dt, self.data_sp_length = (
-            get_data_spower(data_dir=data_dir, solar_power_file='solar_power/shandong_solar_power_processed3.csv'))
+            get_data_spower(data_dir=data_dir, solar_power_file='solar_power/solar_power.csv'))
 
         print('TS only dataset prepared, num_sites={}, sites_ignored={}'.format(num_sites, num_ignored_sites))
 

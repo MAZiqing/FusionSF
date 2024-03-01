@@ -153,7 +153,7 @@ class Ts3MDataset(Dataset):
 
         self.data_sp, self.data_sp_time, self.data_sp_time_dt, self.data_sp_length = (
             get_data_spower(data_dir=data_dir,
-                            solar_power_file='solar_power/shandong_solar_power_processed3.csv',
+                            solar_power_file='solar_power/solar_power.csv',
                             num_sites=num_sites,
                             num_ignored_sites=num_ignored_sites))
 
@@ -161,7 +161,7 @@ class Ts3MDataset(Dataset):
             get_data_satellite(data_dir=data_dir, satellite_dir=satellite_dir, norm_stl=norm_stl))
 
         self.data_ec_grouped, self.ec_start_time = (
-            get_data_nwp(data_dir=data_dir, nwp_file='nwp/shandong_solar_sites_nwp_4.csv', norm_nwp=norm_nwp))
+            get_data_nwp(data_dir=data_dir, nwp_file='nwp/nwp.csv', norm_nwp=norm_nwp))
 
         print('ts context nwp 3 modal dataset prepared, num_sites={}, sites_ignored={}'.format(num_sites,
                                                                                                num_ignored_sites))
