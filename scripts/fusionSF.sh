@@ -6,7 +6,7 @@ export TORCH_DISTRIBUTED_DEBUG=DETAIL
 
 
 python main.py \
-experiment=cross_vivit_3modal \
+experiment=fusionsf_3modal \
 datamodule.dataset.num_sites=10 \
 datamodule.dataset.num_ignored_sites=0 \
 datamodule.batch_size=16 \
