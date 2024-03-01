@@ -61,7 +61,7 @@ def get_data_spower(data_dir, solar_power_file, num_sites=10, num_ignored_sites=
     return data_sp, time, time_dt, length
 
 
-def get_data_satellite(data_dir, satellite_dir, norm_stl=True):
+def get_data_satellite(data_dir, satellite_dir, norm_stl=True, num_feature=1):
     """
     Parameters
     -----------
@@ -80,7 +80,7 @@ def get_data_satellite(data_dir, satellite_dir, norm_stl=True):
     data_satellite_coords = torch.from_numpy(
         np.load(os.path.join(data_dir, satellite_dir, 'satellite_coords.npy')))
     data_satellite_times = np.load(os.path.join(data_dir, satellite_dir, 'satellite_times.npy'))
-    return data_satellite, data_satellite_times, data_satellite_coords
+    return data_satellite[..., :num_feature], data_satellite_times, data_satellite_coords
 
 
 def get_data_nwp(data_dir, nwp_file, norm_nwp=True):
