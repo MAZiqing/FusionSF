@@ -46,6 +46,13 @@ Folder: https://drive.google.com/drive/folders/1qGVOw-hAVQlO3n-1d4ZNHvL42L9PkdBK
 
 Zip File: https://drive.google.com/file/d/18Y-kwNUkT9t5EBugWxtDoE5HnMfaFG2D/view?usp=drive_link
 
+The dataset is supposed to be organized as follows:
+./data/nwp/nwp.csv
+./data/satellite/satellite.npy
+./data/satellite/satellite_coords.npy
+./data/satellite/satellite_times.npy
+./data/solar_power/solar_power.csv
+
 ## Installation
 
 #### Pip
